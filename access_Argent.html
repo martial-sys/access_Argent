@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Félicitations ! Accédez à "L'Argent, Mon Outil de Liberté" | Chez Nous</title>
+    <meta name="description" content="Accédez instantanément à votre guide numérique 'L'Argent, Mon Outil de Liberté' par Chez Nous. Téléchargez votre ebook pour transformer votre relation à l'argent.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    
+    <style>
+        /* ========================================= */
+        /* 1. RÉINITIALISATION & VARIABLES GLOBALES CHEZ NOUS */
+        /* ========================================= */
+
+        /* Définitions des animations spécifiques aux boutons (Mises à jour pour Chez Nous) */
+        @keyframes breathingGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 var(--color-chez-nous-primary-transparent);
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 35px var(--color-chez-nous-primary), 0 0 70px rgba(255, 179, 71, 0.7);
+                filter: brightness(140%);
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes subtlePulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 var(--color-chez-nous-primary-transparent);
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 5px var(--color-chez-nous-primary);
+                filter: brightness(103%);
+                transform: scale(1);
+            }
+        }
+        
+        /* Reset CSS de base (optimisé pour la modernité et la performance) */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--base-font-size);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            color: var(--color-chez-nous-body-text);
+            background-color: var(--color-background-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- VARIABLES GLOBALES CHEZ NOUS (Mises à jour complètes pour lisibilité et esthétique) --- */
+        :root {
+            /* Couleurs Primaires "Chez Nous" (Douces, Chaudes, Inspirées des Couvertures) */
+            --color-chez-nous-primary: #FFB347; /* Un jaune-orangé doux, chaleur et optimisme */
+            --color-chez-nous-secondary: #FFD700; /* Or doux, pour l'éclat et la sagesse (comme le soleil) */
+            --color-chez-nous-accent: #8BC34A; /* Vert tendre, pour la croissance et la nature */
+            
+            --color-chez-nous-primary-transparent: rgba(255, 179, 71, 0.4);
+            --color-chez-nous-primary-rgb: 255, 179, 71;
+            --color-chez-nous-secondary-rgb: 255, 215, 0;
+
+            --color-chez-nous-dark-text: #36454F; /* Gris-bleu foncé pour les titres (élégance, profondeur) */
+            --color-chez-nous-body-text: #5A5A5A; /* Gris plus doux pour le corps de texte */
+            --color-chez-nous-light-text: #888888; /* Gris clair pour les sous-textes */
+
+            /* Couleurs de Fond "Chez Nous" */
+            --color-background-primary: #FFF8F0; /* Crème très clair, ambiance chaleureuse et douce */
+            --color-background-secondary: #FDF3E7; /* Crème légèrement plus soutenue pour les sections alternées */
+            --color-background-highlight: #FFF0D9; /* Un jaune pâle pour les zones d'accentuation */
+            --color-background-card: #FFFFFF; /* Blanc pur pour les cartes (élévation) */
+
+            /* Couleurs de Statut et d'Accent (Maintenues car standards, mais utilisables avec discernement) */
+            --color-success-green: #28A745;
+            --color-warning-yellow: #FFC107;
+            --color-error-red: #DC3545;
+            
+            /* Bordures et Ombres (Ajustées pour une douceur accrue) */
+            --color-border-light: #E0E0E0; /* Bordure très discrète */
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.06); /* Ombre plus douce */
+            --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre équilibrée */
+            --shadow-strong: 0 20px 50px rgba(0, 0, 0, 0.15); /* Ombre prononcée */
+            --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+
+            /* Typographie (ajustée pour une meilleure lisibilité) */
+            --font-family-primary: 'Poppins', sans-serif;
+            --font-family-secondary: 'Roboto', sans-serif;
+            --base-font-size: 17px;
+
+            /* Espacements (maintenus) */
+            --spacing-unit: 8px;
+            --padding-section: 80px 0;
+            --padding-section-mobile: 40px 0;
+
+            /* Tailles de police variables pour la scalabilité (AUGMENTÉES légèrement pour meilleure lisibilité) */
+            --font-size-small: 0.9em;
+            --font-size-medium: 1em;
+            --font-size-large: 1.15em;
+            --font-size-xl: 1.6em;
+            --font-size-xxl: 2.2em;
+            --font-size-xxxl: 3.2em;
+            --font-size-h1: 3.8em;
+            --font-size-h2: 3em;
+            --font-size-h3: 2.4em;
+            --font-size-h4: 2em;
+            
+            --container-max-width: 1100px;
+            --border-radius-small: 4px;
+            --border-radius-medium: 8px;
+            --border-radius-large: 12px;
+            --border-radius-pill: 999px;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semi-bold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extra-bold: 800;
+            --font-weight-black: 900;
+            --color-white: #FFFFFF;
+            --color-heading-dark: var(--color-chez-nous-dark-text);
+            --color-text-base: var(--color-chez-nous-body-text);
+            --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.2);
+            --shadow-button-primary: 0 5px 15px rgba(255, 179, 71, 0.3);
+            --shadow-button-hover: 0 8px 20px rgba(255, 179, 71, 0.5);
+            --padding-container-horizontal: calc(var(--spacing-unit) * 2);
+        }
+
+        /* Basic CSS Reset (optimisé pour la modernité et la performance) */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--base-font-size);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            color: var(--color-chez-nous-body-text);
+            background-color: var(--color-background-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Global CTA Button base */
+        .cta-button.main-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: var(--font-size-medium);
+            font-weight: 800;
+            color: #FFF;
+            background: var(--color-chez-nous-primary);
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease-in-out;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-shadow: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button.main-cta:hover {
+            background: var(--color-chez-nous-secondary);
+            box-shadow: var(--shadow-strong);
+            transform: translateY(-3px);
+            animation: none;
+        }
+
+        .cta-button.main-cta:active {
+            transform: scale(0.95);
+            box-shadow: var(--shadow-light);
+        }
+
+        .cta-button.main-cta::before,
+        .cta-button.main-cta::after {
+            content: none !important;
+        }
+
+        .cta-button.main-cta.animated {
+            animation: subtlePulseGlow 4s ease-in-out infinite;
+        }
+
+        /* Keyframes for animations */
+        @keyframes breathingGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 var(--color-chez-nous-primary-transparent);
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 35px var(--color-chez-nous-primary), 0 0 70px rgba(255, 179, 71, 0.7);
+                filter: brightness(140%);
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes subtlePulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 var(--color-chez-nous-primary-transparent);
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 5px var(--color-chez-nous-primary);
+                filter: brightness(103%);
+                transform: scale(1);
+            }
+        }
+        
+        section {
+            padding: var(--padding-section);
+            position: relative;
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: var(--padding-section-mobile);
+            }
+        }
+
+        .section-title {
+            font-size: var(--font-size-h2);
+            color: var(--color-chez-nous-dark-text);
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 3.125);
+            padding-bottom: calc(var(--spacing-unit) * 2.5);
+            position: relative;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-chez-nous-primary), var(--color-chez-nous-secondary));
+            margin: calc(var(--spacing-unit) * 1.25) auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--padding-container-horizontal);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .highlight-text-secondary {
+            color: var(--color-chez-nous-dark-text);
+            text-decoration: none;
+        }
+
+        /* ========================================= */
+        /* STYLES SPÉCIFIQUES : PAGE D'ACCÈS SÉCURISÉ (`access.html`) */
+        /* ========================================= */
+
+        /* Styles du Header (simplifiés car il est léger sur cette page) */
+        .site-header {
+            background-color: var(--color-background-card);
+            padding: calc(var(--spacing-unit) * 1.875) 0;
+            border-bottom: 1px solid var(--color-border-light);
+            box-shadow: var(--shadow-light);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-logo img {
+            height: 50px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Section Accès au Guide */
+        .access-section {
+            background-color: var(--color-background-card);
+            padding: calc(var(--spacing-unit) * 7.5) 0;
+            text-align: center;
+        }
+
+        .access-section.first-access {
+            padding-top: calc(var(--spacing-unit) * 10);
+        }
+
+        /* Icône de confirmation dans la section d'accès */
+        .access-section .fa-check-circle {
+            font-size: 3.5em;
+            color: var(--color-chez-nous-accent);
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+            display: block;
+        }
+
+        /* Zone dynamique pour l'image du produit et le bouton de téléchargement */
+        .product-download-area {
+            background-color: var(--color-background-secondary);
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
+            padding: calc(var(--spacing-unit) * 5);
+            max-width: 700px;
+            margin: calc(var(--spacing-unit) * 5) auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .product-download-area .product-mockup-download {
+            max-width: 280px; /* Taille pour l'image du mockup, alignée avec la page de validation */
+            height: 280px; /* Taille pour l'image du mockup */
+            object-fit: contain;
+            border-radius: var(--border-radius-medium);
+            box-shadow: var(--shadow-small-subtle);
+        }
+
+        .product-download-area .product-title-download {
+            font-size: var(--font-size-h3);
+            color: var(--color-chez-nous-dark-text);
+            margin-bottom: calc(var(--spacing-unit) * 1);
+            line-height: 1.2;
+        }
+
+        .product-download-area .product-description-download {
+            font-size: var(--font-size-medium);
+            color: var(--color-chez-nous-body-text);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        /* Conteneur des boutons de téléchargement */
+        #download-buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 2);
+            width: 100%;
+            max-width: 350px;
+            margin-top: calc(var(--spacing-unit) * 2.5);
+        }
+
+        /* Bouton de téléchargement */
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-chez-nous-primary);
+            color: var(--color-background-card);
+            font-size: var(--font-size-large);
+            font-weight: 600;
+            padding: calc(var(--spacing-unit) * 1.875) calc(var(--spacing-unit) * 3.75);
+            border-radius: var(--border-radius-medium);
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .download-button:hover {
+            background-color: var(--color-chez-nous-secondary);
+            transform: translateY(calc(var(--spacing-unit) * -0.25));
+            box-shadow: var(--shadow-strong);
+        }
+        .download-button i {
+            margin-right: calc(var(--spacing-unit) * 1.25);
+            font-size: 1.1em;
+        }
+
+
+        /* Section Bonus Info */
+        .bonus-info-section {
+            background-color: var(--color-background-primary);
+            padding: calc(var(--spacing-unit) * 7.5) 0;
+            text-align: center;
+            display: none; /* Masqué par défaut pour les ebooks individuels */
+        }
+        /* Icone section bonus */
+        .bonus-info-section .icon-section {
+            font-size: 3.5em;
+            color: var(--color-chez-nous-primary);
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+        }
+
+        .bonus-info-section .section-title {
+            font-size: var(--font-size-h2);
+            color: var(--color-chez-nous-dark-text);
+            margin-bottom: calc(var(--spacing-unit) * 3.75);
+            line-height: 1.3;
+        }
+
+        .bonus-info-section .section-intro {
+            font-size: var(--font-size-medium);
+            color: var(--color-chez-nous-body-text);
+            margin-top: calc(var(--spacing-unit) * 2.5);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bonus-info-section .bonus-note {
+            font-size: var(--font-size-medium);
+            color: var(--color-chez-nous-body-text);
+            margin-top: calc(var(--spacing-unit) * 2.5);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bonus-info-section .bonus-links-container {
+            display: flex;
+            justify-content: center;
+            gap: calc(var(--spacing-unit) * 2.5);
+            flex-wrap: wrap;
+        }
+
+        .bonus-button {
+            display: inline-block;
+            background-color: var(--color-chez-nous-accent);
+            color: var(--color-background-card);
+            font-size: var(--font-size-medium);
+            font-weight: 600;
+            padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 2.5);
+            border-radius: var(--border-radius-small);
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+
+        .bonus-button:hover {
+            background-color: var(--color-success-green);
+            transform: translateY(calc(var(--spacing-unit) * -0.25));
+            box-shadow: var(--shadow-medium);
+        }
+        .bonus-button i {
+            margin-right: calc(var(--spacing-unit) * 1);
+            font-size: 1.1em;
+        }
+
+        /* Section Support */
+        .support-section {
+            background-color: var(--color-background-primary);
+            padding: calc(var(--spacing-unit) * 7.5) 0;
+            text-align: center;
+        }
+        /* Icone support */
+        .support-section .icon-section {
+            font-size: 3.5em;
+            color: var(--color-chez-nous-accent);
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+        }
+
+        .support-section .section-title {
+            font-size: var(--font-size-h2);
+            color: var(--color-chez-nous-dark-text);
+            margin-bottom: calc(var(--spacing-unit) * 3.75);
+            line-height: 1.3;
+        }
+
+        .support-section .section-intro {
+            font-size: var(--font-size-medium);
+            color: var(--color-chez-nous-body-text);
+            margin-bottom: calc(var(--spacing-unit) * 1.875);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-section p {
+            font-size: var(--font-size-medium);
+            color: var(--color-chez-nous-body-text);
+            margin-bottom: calc(var(--spacing-unit) * 1.875);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: calc(var(--spacing-unit) * 2.5);
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            font-size: var(--font-size-medium);
+            font-weight: 600;
+            text-decoration: none;
+            padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 1.875);
+            border-radius: var(--border-radius-small);
+            transition: opacity 0.3s ease;
+        }
+        .contact-links a i {
+            margin-right: calc(var(--spacing-unit) * 1);
+            font-size: 1.2em;
+        }
+
+        .contact-links .email-link {
+            color: var(--color-chez-nous-dark-text);
+            border: 1px solid var(--color-chez-nous-dark-text);
+            background-color: transparent;
+        }
+        .contact-links .email-link:hover {
+            opacity: 0.8;
+            background-color: var(--color-background-highlight);
+        }
+
+        .contact-links .whatsapp-link {
+            background-color: var(--color-success-green);
+            color: var(--color-background-card);
+        }
+        .contact-links .whatsapp-link:hover {
+            background-color: var(--color-success-green-dark);
+        }
+
+        /* Pied de Page */
+        footer {
+            background-color: var(--color-chez-nous-dark-text);
+            color: var(--color-chez-nous-light-text);
+            padding: calc(var(--spacing-unit) * 5) 0;
+            font-size: var(--font-size-small);
+            text-align: center;
+            margin-top: 0;
+            line-height: 1.6;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 2.5);
+        }
+
+        footer .disclaimer-block {
+            font-size: var(--font-size-small);
+            color: var(--color-chez-nous-light-text);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: calc(var(--spacing-unit) * 1.875);
+            margin-bottom: 0;
+            max-width: 700px;
+        }
+        footer .disclaimer-block p {
+            color: var(--color-chez-nous-light-text);
+            margin-bottom: calc(var(--spacing-unit) * 0.625);
+        }
+
+        footer .disclaimer-block p strong {
+            color: var(--color-background-card);
+        }
+
+        footer .copyright-block {
+            font-size: var(--font-size-small);
+            color: var(--color-chez-nous-light-text);
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        footer .footer-links {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: calc(var(--spacing-unit) * 1.875);
+        }
+
+        footer .footer-links a {
+            color: var(--color-chez-nous-light-text);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+            font-size: var(--font-size-small);
+        }
+
+        footer .footer-links a:hover {
+            color: var(--color-background-card);
+            text-decoration: underline;
+        }
+
+        footer .contact-info {
+            font-size: var(--font-size-small);
+            color: var(--color-background-card);
+            margin-top: 0;
+        }
+
+        footer .contact-info a {
+            color: var(--color-background-card);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer .contact-info a:hover {
+            color: var(--color-chez-nous-light-text);
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVITÉ POUR LA PAGE D'ACCÈS --- */
+        @media (max-width: 768px) {
+            body { font-size: 17px; }
+            .container { padding: 0 calc(var(--spacing-unit) * 1.875); }
+
+            .site-logo img {height: calc(var(--spacing-unit) * 5);}
+
+            section .section-title { font-size: var(--font-size-h3); margin-bottom: calc(var(--spacing-unit) * 3.125); }
+            section .section-title::after {width: calc(var(--spacing-unit) * 10); height: calc(var(--spacing-unit) * 0.5); margin-top: calc(var(--spacing-unit) * 1.25);}
+            p { font-size: var(--font-size-medium); margin-bottom: calc(var(--spacing-unit) * 1.875); line-height: 1.7;}
+
+            .access-section .section-title, .bonus-info-section .section-title, .support-section .section-title { font-size: var(--font-size-h4); margin-bottom: calc(var(--spacing-unit) * 3.125); }
+            .access-section .section-title::after, .bonus-info-section .section-title::after, .support-section .section-title::after { width: calc(var(--spacing-unit) * 7.5); height: calc(var(--spacing-unit) * 0.375); margin-top: calc(var(--spacing-unit) * 1); }
+            .access-section p, .bonus-info-section p, .support-section p, .bonus-info-section .bonus-note { font-size: var(--font-size-medium); margin-bottom: calc(var(--spacing-unit) * 1.875); }
+            .access-section, .bonus-info-section, .support-section {padding: calc(var(--spacing-unit) * 6.25) 0; }
+            .access-section.first-access {padding-top: calc(var(--spacing-unit) * 7.5); }
+
+            .download-button {font-size: var(--font-size-xl); padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3.125); }
+            .download-button i {font-size: 1.1em; margin-right: calc(var(--spacing-unit) * 1); }
+
+            .bonus-button {font-size: var(--font-size-medium); padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.875); margin: calc(var(--spacing-unit) * 1);}
+            .bonus-button i {font-size: 1.1em; margin-right: calc(var(--spacing-unit) * 0.75); }
+
+            .contact-links {flex-direction: column; gap: calc(var(--spacing-unit) * 1.25); align-items: center; }
+            .contact-links a {font-size: var(--font-size-medium); padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5); }
+            .contact-links a i { font-size: 1.1em; margin-right: calc(var(--spacing-unit) * 0.75); }
+
+            footer { padding: calc(var(--spacing-unit) * 3.75) 0; font-size: var(--font-size-small); }
+            footer p { margin-bottom: calc(var(--spacing-unit) * 1); }
+            footer .footer-links a {margin: 0 calc(var(--spacing-unit) * 1); }
+            footer .footer-links {margin-bottom: calc(var(--spacing-unit) * 1.5);}
+            footer .contact-info {font-size: var(--font-size-xsmall);}
+        }
+        @media (max-width: 480px) {
+            body {font-size: var(--base-font-size);}
+            .container { padding: 0 calc(var(--spacing-unit) * 1.25); }
+
+            .site-logo img {height: calc(var(--spacing-unit) * 4.375);}
+
+            section .section-title {font-size: var(--font-size-h4); margin-bottom: calc(var(--spacing-unit) * 2.5); }
+            section .section-title::after { width: calc(var(--spacing-unit) * 6.25); height: calc(var(--spacing-unit) * 0.375); margin-top: calc(var(--spacing-unit) * 0.75); }
+            p { font-size: var(--font-size-medium); margin-bottom: calc(var(--spacing-unit) * 1.25); line-height: 1.6;}
+
+            .access-section .section-title, .bonus-info-section .section-title, .support-section .section-title {font-size: var(--font-size-h5); margin-bottom: calc(var(--spacing-unit) * 2.5); }
+            .access-section .section-title::after, .bonus-info-section .section-title::after, .support-section .section-title::after { width: calc(var(--spacing-unit) * 6.25); height: calc(var(--spacing-unit) * 0.375); margin-top: calc(var(--spacing-unit) * 0.75); }
+            .access-section p, .bonus-info-section p, .support-section p, .bonus-info-section .bonus-note { font-size: var(--font-size-medium); margin-bottom: calc(var(--spacing-unit) * 1.25); }
+            .access-section, .bonus-info-section, .support-section {padding: calc(var(--spacing-unit) * 5) 0; }
+            .access-section.first-access {padding-top: calc(var(--spacing-unit) * 6.25); }
+
+            .download-button {font-size: var(--font-size-medium); padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 2.5); }
+            .download-button i { font-size: 1em; margin-right: calc(var(--spacing-unit) * 0.75); }
+
+            .bonus-button {font-size: var(--font-size-small); padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5); margin: calc(var(--spacing-unit) * 0.75);}
+            .bonus-button i {font-size: 1em; margin-right: calc(var(--spacing-unit) * 0.625); }
+
+            .contact-links {font-size: var(--font-size-small); padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.25); }
+            .contact-links a i {font-size: 1em; margin-right: calc(var(--spacing-unit) * 0.625); }
+
+            footer { padding: calc(var(--spacing-unit) * 3.125) 0; font-size: var(--font-size-xsmall);}
+            footer p { margin-bottom: calc(var(--spacing-unit) * 0.75);}
+            footer .footer-links {flex-direction: column; align-items: center; gap: calc(var(--spacing-unit) * 0.625); margin-bottom: calc(var(--spacing-unit) * 1.25);}
+            footer .footer-links a {margin: 0 calc(var(--spacing-unit) * 0.625);}
+            footer .contact-info {font-size: var(--font-size-xsmall);}
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NZDBJMMCWT');
+    </script>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '[TON_ID_PIXEL_FACEBOOK]'); // REMPLACER PAR L'ID DE TON PIXEL FACEBOOK
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=[TON_ID_PIXEL_FACEBOOK]&ev=PageView&noscript=1" /> </noscript>
+    
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68739dc9dbd61_1002218905.webp" alt="Logo Chez Nous - Sagesse pour une vie alignée">
+            </div>
+        </div>
+    </header>
+
+    <section class="access-section first-access">
+        <div class="container" data-aos="fade-up">
+            <i class="fas fa-check-circle icon-section" style="font-size: 3.5em; color: var(--color-chez-nous-accent); margin-bottom: 20px;"></i>
+            <h2 class="section-title">Félicitations ! Votre Sagesse "Chez Nous" Vous Attend !</h2>
+            <p class="section-intro">Nous sommes ravis de vous accueillir dans le cercle "Chez Nous". Votre guide est prêt à être téléchargé pour que votre transformation commence sans attendre.</p>
+
+            <div class="product-download-area">
+                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68739e6e1df30_1002218963.webp" alt="Couverture de l'Ebook L'Argent, Mon Outil de Liberté" class="product-mockup-download">
+                <h3 class="product-title-download">L'Argent, Mon Outil de Liberté</h3>
+                <p class="product-description-download">Votre guide pour transformer votre relation à l'argent. Gérez vos finances avec clarté, appliquez les 5 Règles d'Or et retrouvez la sérénité financière.</p>
+                <div id="download-buttons-container">
+                    <a href="[URL_TELECHARGEMENT_ARGENT_PDF]" class="download-button animated" data-ga-download-item="argent" data-ga-item-name="L'Argent, Mon Outil de Liberté">
+                        <i class="fas fa-download"></i> Télécharger "L'Argent, Mon Outil de Liberté"
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bonus-info-section" style="display: none;">
+        <div class="container" data-aos="fade-up">
+            <i class="fas fa-gift icon-section" style="font-size: 3.5em; color: var(--color-chez-nous-primary); margin-bottom: 20px;"></i>
+            <h2 class="section-title">Vos Bonus Exclusifs Sont Ici !</h2>
+            <p class="section-intro">Si vous avez opté pour le Pack Complet "Chez Nous", ces ressources précieuses vont maximiser votre expérience et accélérer votre transformation :</p>
+            <div class="bonus-links-container">
+                </div>
+            <p class="bonus-note">
+                <strong><i class="fas fa-sync-alt"></i> Accès aux Mises à Jour :</strong> Vous recevrez
+                <strong>automatiquement par e-mail</strong> les liens vers les futures mises à jour majeures de vos guides. Aucune action n'est requise de votre part pour rester informé(e) !
+            </p>
+        </div>
+    </section>
+
+    <section class="support-section">
+        <div class="container" data-aos="fade-up">
+            <i class="fas fa-life-ring icon-section" style="font-size: 3.5em; color: var(--color-chez-nous-accent); margin-bottom: 20px;"></i>
+            <h2 class="section-title">Besoin d'Aide ou Une Question ?</h2>
+            <p class="section-intro">Si vous avez la moindre question concernant l'accès à votre contenu ou le téléchargement, notre équipe "Chez Nous" est là pour vous aider.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:contact@cheznous.com" class="contact-links email-link" data-aos="fade-right" data-aos-delay="200">
+                    <i class="fas fa-envelope"></i> Envoyer un Email
+                </a>
+                
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em; color: var(--color-chez-nous-light-text);">
+                (Pour les questions liées à l'accès à vos guides et bonus uniquement.)
+            </p>
+        </div>
+    </section>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    <script>
+        // Met à jour l'année dans le footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpanFooter = document.getElementById('current-year-footer');
+            if (yearSpanFooter) {
+                yearSpanFooter.textContent = new Date().getFullYear();
+            } else {
+                console.warn("Element with ID 'current-year-footer' not found. Check footer HTML ID.");
+            }
+        });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NZDBJMMCWT');
+    </script>
+    <script>
+        // Initialisation du Pixel Facebook (si non déjà dans le head)
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '[TON_ID_PIXEL_FACEBOOK]'); // REMPLACER PAR L'ID DE TON PIXEL FACEBOOK
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=[TON_ID_PIXEL_FACEBOOK]&ev=PageView&noscript=1" /> </noscript>
+
+    <script>
+        // =========================================================
+        // FONCTION D'AIDE : Suivi des événements GA4
+        // =========================================================
+        function trackGA4Event(eventName, eventParams = {}) {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, eventParams);
+                // console.log(`GA4 Event Fired (Access Page): ${eventName}`, eventParams); // Décommenter pour débogage
+            } else {
+                console.warn(`GA4 gtag function not found for event: ${eventName} on access page.`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Déclenchement de l'événement d'achat (Purchase) au chargement de la page
+            // Ces infos devraient idéalement venir de Chariow (paramètres d'URL ou données post)
+            // Mais ici, elles sont codées en dur pour la page spécifique
+            const productInfo = {
+                slug: "argent",
+                name: "L'Argent, Mon Outil de Liberté",
+                priceEur: 3.81, // Prix en EUR
+                priceFcfa: 2500, // Prix en FCFA
+                imageUrl: "[URL_MOCKUP_EBOOK_ARGENT]", // URL du mockup spécifique
+                downloadUrl: "[URL_TELECHARGEMENT_ARGENT_PDF]" // URL du PDF à télécharger
+            };
+
+            const transactionId = `CHZ-${Date.now()}-ARGENT`; // ID de transaction unique pour cette page/produit
+
+            // Événement Purchase - Déclenché une seule fois
+            const purchaseEventSentKey = `purchase_sent_${productInfo.slug}_${transactionId}`;
+            if (!sessionStorage.getItem(purchaseEventSentKey)) {
+                trackGA4Event('purchase', {
+                    currency: 'EUR',
+                    value: productInfo.priceEur,
+                    transaction_id: transactionId,
+                    items: [{
+                        item_id: productInfo.slug,
+                        item_name: productInfo.name,
+                        currency: 'EUR',
+                        price: productInfo.priceEur,
+                        quantity: 1
+                    }],
+                    event_category: 'Conversion - Purchase',
+                    event_label: `Achat Finalisé : ${productInfo.name}`
+                });
+                sessionStorage.setItem(purchaseEventSentKey, 'true'); // Marque l'événement comme envoyé
+            }
+
+            // Gestion du clic sur le bouton de téléchargement
+            const downloadButton = document.querySelector('.download-button');
+            if (downloadButton) {
+                downloadButton.addEventListener('click', function() {
+                    trackGA4Event('download_item', { // Événement personnalisé
+                        item_id: productInfo.slug,
+                        item_name: productInfo.name,
+                        event_category: 'Engagement - Téléchargement',
+                        event_label: `Clic sur bouton : ${productInfo.name}`
+                    });
+                    // Facultatif: Gérer l'ouverture du lien si le navigateur ne le fait pas automatiquement après l'événement
+                    // window.location.href = this.href;
+                });
+            }
+
+            // =========================================================
+            // Initialisation de l'année dans le pied de page
+            // =========================================================
+            const yearSpanFooter = document.getElementById('current-year-footer');
+            if (yearSpanFooter) {
+                yearSpanFooter.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
